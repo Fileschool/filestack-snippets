@@ -1,5 +1,5 @@
 // Initialize Filestack client
-const client = filestack.init("YOUR_API_KEY"); // Replace the placeholder text with your Filestack API key
+const client = filestack.init("YOUR_API_KEY"); // Replace this with your Filestack API key
 
 const uploadBtn = document.getElementById("uploadBtn");
 const originalImage = document.getElementById("originalImage");
@@ -10,7 +10,6 @@ const RUN_WORKFLOW_URL = "http://localhost:3001/run-workflow";
 const STATUS_URL = "http://localhost:3001/workflow-status";
 
 uploadBtn.addEventListener("click", () => {
-  // Open File Picker 
   client
     .picker({
       maxFiles: 1,
@@ -66,14 +65,14 @@ function pollWorkflow(jobId) {
         /**
          * IMPORTANT:
          * The output comes from the STORE task name
-         * In our Workflow, the STORE task name is store_print_ready
+         * In our Workflow, the STORE task name is store_1766662754939
          */
-        
+
         const output =
               data.results &&
-              data.results.store_print_ready &&
-              data.results.store_print_ready.data
-          ? data.results.store_print_ready.data.url
+              data.results.store_1766662754939 &&
+              data.results.store_1766662754939.data
+          ? data.results.store_1766662754939.data.url
         : null;
         
 
@@ -81,8 +80,7 @@ function pollWorkflow(jobId) {
           throw new Error("Workflow finished but no output file found");
         }
         
-        // Show processed image
-        processedImage.src = `https://cdn.filestackcontent.com/${output}`; 
+        processedImage.src = output; 
         statusBox.innerHTML = "✅ Done! Your print-ready image is ready.";
         statusBox.style.background = "#dcfce7";
       }
