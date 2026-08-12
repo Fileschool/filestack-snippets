@@ -16,7 +16,7 @@ cp .env.example .env       # add your API key
 npm run dev
 ```
 
-Get a free API key at [dev.filestack.com/signup/free](https://dev.filestack.com/signup/free).
+Get a free API key at [filestack.com/signup-free](https://filestack.com/signup-free).
 The key is safe in the browser. It identifies the application; it is not a secret.
 
 ## What is in here
