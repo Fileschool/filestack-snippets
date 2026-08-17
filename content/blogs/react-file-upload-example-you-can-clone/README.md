@@ -9,10 +9,10 @@ React 19.2 (Vite and Next.js) and React 18.3.1 (Remix).
 ## Quick start
 
 ```bash
-git clone https://github.com/filestack/filestack-react-v7-examples
-cd filestack-react-v7-examples
+git clone https://github.com/Fileschool/filestack-snippets.git
+cd filestack-snippets/content/blogs/react-file-upload-example-you-can-clone
 npm install
-cp .env.example .env       # add your API key
+cp .env.example .env
 npm run dev
 ```
 
